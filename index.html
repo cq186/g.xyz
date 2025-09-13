@@ -1,0 +1,56 @@
+<html>
+
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1476467014654633"
+     crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+   var t=null;
+   t=setTimeout(time,1000);   //设置定时器，一秒刷新一次
+   function time(){
+       clearTimeout(t);  //清楚定时器
+       dt=new Date();
+       var y=dt.getYear()+1900;
+       var m=dt.getMonth()+1;
+       var d=dt.getDate();
+       var weekday=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+       var day=dt.getDay();
+       var h=dt.getHours();
+       var min=dt.getMinutes();
+       var s=dt.getSeconds();
+       if(h<10){
+           h="0"+h;
+       }
+       if(min<10){
+           min="0"+min;
+       }
+       if(s<10){
+           s="0"+s;
+       }
+       document.getElementById("timeShow").innerHTML= y + "年" + m + "月" + d + "日" + weekday[day] + "" + h + ":" + min + ":" + s + "";
+       t = setTimeout(time, 1000);
+   }
+ 
+
+</script>
+
+</head>
+
+<body  >
+<center>
+
+ 
+ <div > <font color="red"  size="20" >欢迎使用</font></div>
+ 
+ 
+<img src="timg.gif" width="898" height="479"  />
+
+<font color="red"  size="20" ><div  id="timeShow"></div> </font>
+
+<iframe width="80%" height="800px" frameborder="0" src="https://plugin.speedtest.cn/"></iframe>
+</center>
+</body>
+
+</html>
+ 
